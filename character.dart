@@ -1,8 +1,7 @@
 import 'dart:math';
 import 'arme.dart';
-import 'characterConfig.dart';
 
-class Character implements CharacterConfig {
+class Character {
   final String name;
   final int maxHP;
   int? currentHP;
