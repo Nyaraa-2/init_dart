@@ -18,13 +18,13 @@ class Character implements CharacterConfig {
   }
 
   int Attack() {
-    print("$name attaque");
+    print("$name attaque 🤺");
     int damage = this.arme.degats + Random().nextInt(10) + 1;
     return damage;
   }
 
   int SpecialAttack() {
-    print("$name utilise sa compétence spécial");
+    print("$name utilise sa compétence spécial 🚀");
     cooldown = 5;
     return Attack() + Attack();
   }
@@ -35,14 +35,14 @@ class Character implements CharacterConfig {
   }
 
   void heal() {
-    print("$name est en train de se soigner");
+    print("⛑ $name est en train de se soigner ⛑");
     try {
       int result = (currentHP! + maxHP ~/ 2);
       if (result < maxHP) {
         currentHP = result;
         print("$name a soigné $result, il possède $currentHP");
       } else {
-        print("$name a récupéré toute sa vie");
+        print("$name a récupéré toute sa vie 🧚‍♂️");
         currentHP = maxHP;
       }
     } catch (e) {
@@ -52,7 +52,7 @@ class Character implements CharacterConfig {
 
   void getMana() {
     if (currentMP != maxMP) {
-      print("$name a récupéré 2 points de mana");
+      print("$name a récupéré 2 points de mana ₼");
       currentMP = currentMP! + 2;
     }
   }
@@ -65,6 +65,6 @@ class Character implements CharacterConfig {
 
   void takeDamage(int dmg) {
     currentHP = currentHP! - dmg;
-    print("$name a pris $dmg de dégat");
+    print("$name a pris $dmg de dégat 🌬");
   }
 }

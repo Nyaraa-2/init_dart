@@ -4,7 +4,7 @@ import 'character.dart';
 import 'race.dart';
 
 void play(Character character_play, Character character_notplay) {
-  print("C'est a ${character_play.name} de jouer");
+  print("C'est a ${character_play.name} de jouer 🎮");
   character_play.initalStep();
   if ((character_play.maxHP * 0.30) >= character_play.currentHP!) {
     character_play.heal();
@@ -33,11 +33,11 @@ void main(List<String> args) {
       play(character_two, character_one);
     }
     print(
-        "fin dur tour :${character_one.name} a ${character_one.currentHP}.\n${character_two.name} a ${character_two.currentHP}\n--------");
+        "Fin dur tour :${character_one.name} a ${character_one.currentHP}.\n${character_two.name} a ${character_two.currentHP}\n--------");
     if (character_two.currentHP! <= 0 || character_one.currentHP! <= 0) {
       isFinish = true;
       print(
-          "FIn de la partie, ${character_one.name} a ${character_one.currentHP}.\n${character_two.name} a ${character_two.currentHP}");
+          "Fin de la partie, ${character_one.name} a ${character_one.currentHP}. 🔚 \n 🏆 Gagnant : ${character_two.name} a ${character_two.currentHP}");
     }
     whoPlay = !whoPlay;
   }
